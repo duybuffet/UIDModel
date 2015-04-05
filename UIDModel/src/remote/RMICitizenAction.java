@@ -5,6 +5,7 @@
  */
 package remote;
 
+import common.model.Centre;
 import common.model.PersonDetails;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -19,4 +20,6 @@ public interface RMICitizenAction extends Remote {
     ArrayList<PersonDetails> search(String fName, String mName, String lName) throws RemoteException;
 
     void sendRequest(PersonDetails person, int centre) throws RemoteException;
+    
+    ArrayList<Centre> loadCentre() throws RemoteException;
 }
